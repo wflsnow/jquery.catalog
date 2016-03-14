@@ -1,0 +1,161 @@
+.catalog_wrapper {
+  width: 100%;
+}
+.catalog_body {
+  width: inherit;
+}
+.catalog_body > div {
+  display: inline-block;
+}
+.catalog_content {
+  width: calc(100% - 500px);
+}
+.catalog_side {
+  width: 200px;
+  height: 80%;
+  position: fixed;
+  top: 50px;
+  padding: 5px;
+}
+.catalog_side_line {
+  display: inline-block;;
+  margin-top: 10px;
+  border-left: 2px solid #eaeaea;
+  width: 10px;
+  height: 350px;
+}
+.catalog_side_body {
+  position: fixed;
+  display: inline-block;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  margin-top: 2px;
+  margin-left: -16px;
+  max-height: 350px;
+  width: 100%;
+  padding-right: 15px;
+  overflow-y: auto;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 20px;
+}
+.level-1 > dl {
+  line-height: 15px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.level-2 {
+  font-weight: normal;
+}
+.catalog_side_body dt > span {
+  width: 200px;
+  display: inline-block;
+  padding: 2px;
+}
+.catalog_side_body dt > span:hover {
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+.circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border: 2px solid #eaeaea;
+}
+.start {
+  margin-top: -9px;
+  margin-left: -6px;
+}
+.end {
+  margin-bottom: -343px;
+  margin-left: -6px;
+  display: inline-block;
+}
+.pointer {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  background-color: #eaeaea;
+  border: 2px solid;
+  border-color: #fff;
+}
+.level-2 .pointer {
+  visibility: hidden;
+}
+.level-1 .num {
+  width: 35px;
+  display: inline-block;
+  text-align: center;
+}
+.level-2 .num {
+  width: 60px;
+  text-align: right;
+  padding-right: 1em;
+  display: inline-block;
+}
+dl.catalog_side_body {
+  counter-reset: level_1;
+}
+dl.catalog_side_body dl {
+  counter-reset: level_2;
+}
+.level-1 .num:after {
+  counter-increment: level_1;
+  content: counter(level_1) " ";
+}
+.level-2 .num:after {
+  counter-increment: level_2;
+  content: counter(level_1) "." counter(level_2) " ";
+}
+.heading {
+  display: inline-block;
+}
+.hover {
+  background-color: #736AFF;
+}
+.active {
+  animation: active 1s infinite;
+  -webkit-animation: active 1s infinite;
+  -moz-animation: active 1s infinite;
+}
+.active.pointer {
+  visibility: visible;
+}
+@keyframes active {
+  0% {background-color: #e5e5ff;}
+  25% {background-color: #b3b3ff;}
+  75% {background-color: #8080ff;}
+  100% {background-color: #4d4dff; border-color: #b3b3ff;}
+}
+@-webkit-keyframes active {
+  0% {background-color: #e5e5ff;}
+  25% {background-color: #b3b3ff;}
+  75% {background-color: #8080ff;}
+  100% {background-color: #4d4dff; border-color: #b3b3ff;}
+}
+@-moz-keyframes active {
+  0% {background-color: #e5e5ff;}
+  25% {background-color: #b3b3ff;}
+  75% {background-color: #8080ff;}
+  100% {background-color: #4d4dff; border-color: #b3b3ff;}
+}
+
+
+/*ol.catalog_side_body li:before {
+  counter-increment: level1;
+  content: counter(level1) " ";
+}*/
+/*
+li ol {
+  counter-reset: level-2;
+}
+li ol li:before {
+  counter-increment: level-2;
+  content: "  " counter(level-1) "." counter(level-2) " ";
+}*/

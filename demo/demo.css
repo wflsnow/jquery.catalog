@@ -1,0 +1,8 @@
+.catalog_content [heading] {
+  height: 500px;
+  /*border: solid 1px;*/
+}
+
+.catalog_content [heading] [heading] {
+  height: 100px;
+}
